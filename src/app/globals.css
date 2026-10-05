@@ -1,0 +1,143 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Nilex Holidays brand tokens
+ * Blue  -> primary (from the "N" + "HOLIDAYS" in the logo)
+ * Orange -> accent (from the swoosh + "NILEX")
+ */
+:root {
+  --radius: 1rem;
+
+  --background: oklch(0.99 0.004 240);
+  --foreground: oklch(0.22 0.04 255);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.04 255);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.04 255);
+
+  --primary: oklch(0.5 0.14 250);
+  --primary-foreground: oklch(0.99 0 0);
+  --navy: oklch(0.26 0.08 255);
+
+  --secondary: oklch(0.955 0.018 240);
+  --secondary-foreground: oklch(0.32 0.1 252);
+
+  --muted: oklch(0.96 0.01 240);
+  --muted-foreground: oklch(0.5 0.03 255);
+
+  --accent: oklch(0.72 0.18 55);
+  --accent-foreground: oklch(0.99 0 0);
+  --accent-strong: oklch(0.6 0.18 48);
+
+  --sand: oklch(0.975 0.014 80);
+
+  --destructive: oklch(0.58 0.22 27);
+  --border: oklch(0.91 0.015 245);
+  --input: oklch(0.89 0.02 245);
+  --ring: oklch(0.55 0.14 250);
+}
+
+@theme inline {
+  --font-sans: "Plus Jakarta Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Caveat", cursive;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-navy: var(--navy);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-strong: var(--accent-strong);
+  --color-sand: var(--sand);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 4px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-float-slow: float 10s ease-in-out infinite;
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-14px); }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-background font-sans text-foreground;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+    text-wrap: balance;
+  }
+  ::selection {
+    background: color-mix(in oklch, var(--accent) 35%, transparent);
+  }
+}
+
+@utility container-x {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 80rem;
+  padding-inline: 1rem;
+  @media (width >= 40rem) {
+    padding-inline: 1.5rem;
+  }
+  @media (width >= 64rem) {
+    padding-inline: 2rem;
+  }
+}
+
+@utility text-gradient {
+  background-image: linear-gradient(100deg, var(--accent) 0%, oklch(0.66 0.2 40) 45%, var(--primary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-grain {
+  background-image: radial-gradient(color-mix(in oklch, var(--primary) 10%, transparent) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
