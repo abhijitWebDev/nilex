@@ -15,8 +15,8 @@ export const site = {
   phone: "+91 9029446711", // PLACEHOLDER
   phoneHref: "tel:+919029446711", // PLACEHOLDER
   whatsapp: "919029446711", // PLACEHOLDER: country code + number, digits only
-  // email: "hello@nilexholidays.com", // PLACEHOLDER
-  // address: "Office address, City, State – PIN, India", // PLACEHOLDER
+  email: "hello@nilexholidays.com", // PLACEHOLDER
+  address: "Office address, City, State – PIN, India", // PLACEHOLDER
   hours: "Mon – Sat, 10:00 AM – 7:00 PM", // PLACEHOLDER
 
   socials: {

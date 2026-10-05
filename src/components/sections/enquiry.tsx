@@ -57,8 +57,8 @@ export function Enquiry({ defaultDestination }: { defaultDestination?: string })
 
               <ul className="mt-10 space-y-5">
                 <ContactRow icon={PhoneIcon} label="Call us" value={site.phone} href={site.phoneHref} />
-                {/* <ContactRow icon={MailIcon} label="Email" value={site.email} href={`mailto:${site.email}`} />
-                <ContactRow icon={MapPinIcon} label="Visit" value={site.address} /> */}
+                <ContactRow icon={MailIcon} label="Email" value={site.email} href={`mailto:${site.email}`} />
+                <ContactRow icon={MapPinIcon} label="Visit" value={site.address} />
                 <ContactRow icon={ClockIcon} label="Hours" value={site.hours} />
               </ul>
 
