@@ -24,7 +24,7 @@ export function Footer() {
       <div className="container-x grid gap-12 pt-6 pb-12 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
         <div>
           <div className="inline-flex rounded-2xl bg-white p-3">
-            <Image src="/logo-full.png" alt="Nilex Holidays" width={750} height={505} className="h-20 w-auto" />
+            <Image src="/logo-full-new.jpeg" alt="Nilex Holidays" width={1280} height={539} className="h-auto w-[119px]" />
           </div>
           <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/70">
             Holiday packages, flight bookings, visas and travel insurance — planned end to end by people who

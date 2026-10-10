@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     description: site.description,
     images: [{ url: img.kedarnathPeaks }],
   },
-  icons: { icon: "/logo-mark.png", apple: "/logo-mark.png" },
+  icons: { icon: "/icon-new.png", apple: "/apple-icon-new.png" },
 }
 
 export const viewport: Viewport = {
