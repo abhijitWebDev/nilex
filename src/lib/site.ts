@@ -14,7 +14,7 @@ export const site = {
 
   phone: "+91 8087077737", // PLACEHOLDER
   phoneHref: "tel:+918087077737", // PLACEHOLDER
-  whatsapp: "918-87077737", // PLACEHOLDER: country code + number, digits only
+  whatsapp: "91-8087077737", // PLACEHOLDER: country code + number, digits only
   email: "info.nilexholidays@gmail.com", // PLACEHOLDER
   address: "A/10, Shardhasharam Bldg., Bhavani Shankar Road, Dadar(W), Mumbai - 400028", // PLACEHOLDER
   hours: "Mon – Sat, 10:00 AM – 7:00 PM", // PLACEHOLDER
