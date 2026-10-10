@@ -14,7 +14,7 @@ export const site = {
 
   phone: "+91 8087077737", // PLACEHOLDER
   phoneHref: "tel:+918087077737", // PLACEHOLDER
-  whatsapp: "91-8087077737", // PLACEHOLDER: country code + number, digits only
+  whatsapp: "918087077737", // PLACEHOLDER: country code + number, digits only
   email: "info.nilexholidays@gmail.com", // PLACEHOLDER
   address: "A/10, Shardhasharam Bldg., Bhavani Shankar Road, Dadar(W), Mumbai - 400028", // PLACEHOLDER
   hours: "Mon – Sat, 10:00 AM – 7:00 PM", // PLACEHOLDER
@@ -35,5 +35,5 @@ export const nav = [
 ] as const
 
 export function whatsappLink(message: string) {
-  return `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(message)}`
+  return `https://wa.me/${site.whatsapp.replace(/\D/g, "")}?text=${encodeURIComponent(message)}`
 }
