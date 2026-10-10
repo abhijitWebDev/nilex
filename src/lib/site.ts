@@ -12,11 +12,11 @@ export const site = {
     "Nilex Holidays plans holiday packages, flight bookings, visas and travel insurance across North India, Char Dham and the world's most loved destinations.",
   url: "https://nilexholidays.com", // PLACEHOLDER domain
 
-  phone: "+91 9029446711", // PLACEHOLDER
-  phoneHref: "tel:+919029446711", // PLACEHOLDER
-  whatsapp: "919029446711", // PLACEHOLDER: country code + number, digits only
+  phone: "+91 8087077737", // PLACEHOLDER
+  phoneHref: "tel:+918087077737", // PLACEHOLDER
+  whatsapp: "918-87077737", // PLACEHOLDER: country code + number, digits only
   email: "info.nilexholidays@gmail.com", // PLACEHOLDER
-  address: "Office address, City, State – PIN, India", // PLACEHOLDER
+  address: "A/10, Shardhasharam Bldg., Bhavani Shankar Road, Dadar(W), Mumbai - 400028", // PLACEHOLDER
   hours: "Mon – Sat, 10:00 AM – 7:00 PM", // PLACEHOLDER
 
   socials: {
